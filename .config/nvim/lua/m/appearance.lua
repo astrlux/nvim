@@ -1,6 +1,7 @@
 local o, g, cmd = vim.opt, vim.g, vim.cmd
 o.tgc = true -- termguicolors
 o.bg = 'dark'
+g.vscode_style = 'dark'
 require('material').setup({
     contrast = {
         sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
