@@ -3,7 +3,7 @@ require('telescope').setup({
     defaults = {
         file_ignore_patterns = {
             'vendor', 'fonts', 'logs', '.DS_Store', 'node_modules', '.git',
-            '.hg'
+            '.hg', 'lua-language-server'
         },
         file_sorter = require('telescope.sorters').get_fzy_sorter,
         -- color_devicons = true,

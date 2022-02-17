@@ -30,14 +30,14 @@ require('packer').startup(function()
     }
     use 'mbbill/undotree' -- View undo history
     use 'tpope/vim-fugitive' -- Git power tool
-    use { -- Surround tool
-        'blackcauldron7/surround.nvim',
-        config = function()
-            require'surround'.setup {
-                mappings_style = 'surround'
-            }
-        end
-    }
+    -- use { -- Surround tool
+    --     'blackcauldron7/surround.nvim',
+    --     config = function()
+    --         require'surround'.setup {
+    --             mappings_style = 'surround'
+    --         }
+    --     end
+    -- }
     use 'nvim-lualine/lualine.nvim' -- Lua status line
     use 'glepnir/lspsaga.nvim'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -56,6 +56,7 @@ require('packer').startup(function()
     use 'Mofiqul/vscode.nvim'
     -- use 'kyazdani42/nvim-web-devicons'
     use 'arzg/vim-colors-xcode'
+    use 'savq/melange'
     use 'navarasu/onedark.nvim'
     use 'n1ghtmare/noirblaze-vim'
     use {
