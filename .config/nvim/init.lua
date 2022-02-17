@@ -1,6 +1,6 @@
 require 'm.plugins'
 require 'm.sets'
--- require 'm.lsp'
+require 'm.lsp'
 require 'm.completion'
 require 'm.maps'
 require 'm.highlight'
