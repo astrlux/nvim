@@ -25,8 +25,8 @@ o.incsearch = true
 o.ignorecase = true
 o.signcolumn = 'number'
 o.completeopt = 'menuone,noselect'
-o.cursorline = true
 o.scrolloff = 7
+-- o.cursorline = true
 -- vim.cmd [[
 --   augroup JumpCursorLastPosition
 --     autocmd!
