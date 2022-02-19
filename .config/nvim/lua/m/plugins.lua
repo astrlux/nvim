@@ -2,8 +2,8 @@
 local install_path = vim.fn.stdpath 'data'
                          .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-    vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim '
-                       .. install_path)
+  vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim '
+                     .. install_path)
 end
 vim.api.nvim_exec([[
   augroup Packer
@@ -13,49 +13,37 @@ vim.api.nvim_exec([[
 ]], false)
 local use = require('packer').use
 require('packer').startup(function()
-    use 'wbthomason/packer.nvim' -- Package manager
-    use { -- Syntax highlighting
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-    use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
-    use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
-    use { -- native C port of FZF
-        'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'make'
-    }
-    use { -- Fuzzy file finder
-        'nvim-telescope/telescope.nvim',
-        requires = {'nvim-lua/plenary.nvim'}
-    }
-    use 'mbbill/undotree' -- View undo history
-    use 'tpope/vim-fugitive' -- Git power tool
-    -- use { -- Surround tool
-    --     'blackcauldron7/surround.nvim',
-    --     config = function()
-    --         require'surround'.setup {
-    --             mappings_style = 'surround'
-    --         }
-    --     end
-    -- }
-    use 'nvim-lualine/lualine.nvim' -- Lua status line
-    use 'glepnir/lspsaga.nvim'
-    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
-    use 'jose-elias-alvarez/nvim-lsp-ts-utils' -- typescript specific tools
-    use 'kyazdani42/nvim-tree.lua' -- file tree
-    use 'iamcco/markdown-preview.nvim'
-    use 'nvim-telescope/telescope-file-browser.nvim'
-    -- use 'lukas-reineke/indent-blankline.nvim'
-    -- colors
-    use 'marko-cerovac/material.nvim'
-    use 'Mofiqul/vscode.nvim'
-    use 'savq/melange'
-    use {
-        'metalelf0/jellybeans-nvim',
-        requires = {'rktjmp/lush.nvim'}
-    }
+  use 'wbthomason/packer.nvim' -- Package manager
+  use { -- Syntax highlighting
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
+  use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
+  use { -- native C port of FZF
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make'
+  }
+  use { -- Fuzzy file finder
+    'nvim-telescope/telescope.nvim',
+    requires = {'nvim-lua/plenary.nvim'}
+  }
+  use 'mbbill/undotree' -- View undo history
+  use 'tpope/vim-fugitive' -- Git power tool
+  use 'tpope/vim-surround' -- surround
+  use 'nvim-lualine/lualine.nvim' -- Lua status line
+  use 'glepnir/lspsaga.nvim'
+  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+  use 'kyazdani42/nvim-tree.lua' -- file tree
+  use 'iamcco/markdown-preview.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'metalelf0/jellybeans-nvim',
+    requires = {'rktjmp/lush.nvim'}
+  }
 end)

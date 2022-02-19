@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local nor = {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 }
 vim.g.mapleader = ' '
 -- Esc into normal mode faster
@@ -78,7 +78,7 @@ map('n', '<LEADER>fb', ':Telescope file_browser<CR>', nor)
 map('n', '`t',
     [[<CMD>lua require('lspsaga.floaterm').open_float_terminal()<CR>]], nor)
 map('t', '`t',
-    [[<C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>]],
+    [[<C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal('', 1)<CR>]],
     nor)
 map('n', '<leader>mm',
     [[<Cmd>lua require('material.functions').toggle_style()<CR>]], nor)
