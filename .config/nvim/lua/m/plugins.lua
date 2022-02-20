@@ -39,7 +39,6 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'kyazdani42/nvim-tree.lua' -- file tree
-  use 'iamcco/markdown-preview.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use {
