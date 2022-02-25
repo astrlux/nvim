@@ -22,17 +22,6 @@ require('telescope').setup({
       }
     }
   },
-  pickers = {
-    find_files = {
-      theme = 'ivy'
-    },
-    gitfiles = {
-      theme = 'ivy'
-    },
-    buffers = {
-      theme = 'ivy'
-    }
-  },
   extensions = {
     fzf = {
       fuzzy = true, -- false will perform exact matches
