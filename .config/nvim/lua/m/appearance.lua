@@ -5,5 +5,5 @@ g.vscode_style = 'dark'
 cmd 'colorscheme monochrome'
 cmd [[
   hi LspFloatWinBorder guifg=#AAAAAA guibg=none
-  "hi CursorLineNR guifg=yellow
+  hi EndOfBuffer guifg=#121212
 ]]
