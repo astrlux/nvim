@@ -22,8 +22,8 @@ o.smartcase = true
 o.showmatch = true
 o.incsearch = true
 o.ignorecase = true
-o.signcolumn = 'number'
-o.relativenumber = true
+o.signcolumn = 'no'
+o.relativenumber = false
 o.completeopt = 'menuone,noselect'
 o.scrolloff = 7
 -- vim.cmd [[
