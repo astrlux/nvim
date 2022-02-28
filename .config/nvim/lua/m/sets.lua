@@ -2,7 +2,6 @@ local o = vim.opt
 o.mouse = 'a'
 o.wrap = false
 o.number = true
-o.relativenumber = true
 o.hidden = true
 o.ruler = false
 o.laststatus = 0
@@ -24,9 +23,9 @@ o.showmatch = true
 o.incsearch = true
 o.ignorecase = true
 o.signcolumn = 'number'
+o.relativenumber = true
 o.completeopt = 'menuone,noselect'
 o.scrolloff = 7
-o.cursorline = true
 -- vim.cmd [[
 --   augroup JumpCursorLastPosition
 --     autocmd!
