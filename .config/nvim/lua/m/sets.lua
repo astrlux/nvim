@@ -23,9 +23,9 @@ o.showmatch = true
 o.incsearch = true
 o.ignorecase = true
 o.signcolumn = 'yes'
-o.relativenumber = false
+o.relativenumber = true
 o.completeopt = 'menuone,noselect'
-o.scrolloff = 7
+o.scrolloff = 11
 -- vim.cmd [[
 --   augroup JumpCursorLastPosition
 --     autocmd!
