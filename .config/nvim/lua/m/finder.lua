@@ -1,10 +1,11 @@
+local to_ignore = {
+  'img', 'vendor', 'fonts', 'logs', '.DS_Store', 'node_modules', '.git', '.hg',
+  'lua-language-server'
+}
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {
-    file_ignore_patterns = {
-      'vendor', 'fonts', 'logs', '.DS_Store', 'node_modules', '.git', '.hg',
-      'lua-language-server'
-    },
+    file_ignore_patterns = to_ignore,
     file_sorter = require('telescope.sorters').get_fzy_sorter,
     -- color_devicons = true,
     file_previewer = require('telescope.previewers').vim_buffer_cat.new,

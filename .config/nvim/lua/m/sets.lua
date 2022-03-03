@@ -1,5 +1,6 @@
 local o = vim.opt
 o.mouse = 'a'
+o.guicursor = ''
 o.wrap = false
 o.number = true
 o.hidden = true
@@ -24,6 +25,7 @@ o.incsearch = true
 o.ignorecase = true
 o.signcolumn = 'yes'
 o.relativenumber = true
+o.cursorline = true
 o.completeopt = 'menuone,noselect'
 o.scrolloff = 11
 -- vim.cmd [[
