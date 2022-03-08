@@ -40,6 +40,5 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'kyazdani42/nvim-tree.lua' -- file tree
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'Mofiqul/vscode.nvim'
   use 'kdheepak/monochrome.nvim'
 end)
