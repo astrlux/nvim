@@ -1,7 +1,6 @@
 ### Neovim LuaJIT Motivation
 
-- Featherweight configuration prioritizes speed (without nonsensical CPU usage)
-
+- Featherweight configuration prioritizes speed
 - Better-than-IDE experience in under 420 lines of Lua ☾
 
 ```
