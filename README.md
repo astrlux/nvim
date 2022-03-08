@@ -1,7 +1,7 @@
 ### Neovim LuaJIT Motivation
 
-- Featherweight configuration prioritizes speed
-- Better-than-IDE experience in under 420 lines of Lua ☾
+- A configuration like this achieves the "modern" I.D.E.'s full featureset -- even superseding it in many ways. All this, while hogging 1800% less memory. Cull your plugins on absolute necessity.
+- A lot of life packed into 420 lines of Lua ☾
 
 ```
 nvim
