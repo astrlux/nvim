@@ -7,5 +7,4 @@ cmd [[
   hi LspFloatWinBorder guifg=white guibg=none
   hi EndOfBuffer guifg=#121212
   hi Normal guibg=none
-  hi CursorLineNR guifg=#39FF14
 ]]
