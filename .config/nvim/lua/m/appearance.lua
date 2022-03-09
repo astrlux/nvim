@@ -3,7 +3,8 @@ o.tgc = true -- termguicolors
 o.bg = 'dark'
 cmd 'colorscheme monochrome'
 cmd [[
-  hi LspFloatWinBorder guifg=white guibg=none
+  hi Normal guibg=none
   hi EndOfBuffer guifg=#121212
-  hi CursorLineNR guifg=yellow
+  hi MatchParen guifg=black guibg=orange
+  hi LspFloatWinBorder guifg=white guibg=none
 ]]
