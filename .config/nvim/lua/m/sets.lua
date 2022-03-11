@@ -1,4 +1,5 @@
 local o = vim.opt
+o.guicursor = ''
 o.mouse = 'a'
 o.wrap = false
 o.number = true
