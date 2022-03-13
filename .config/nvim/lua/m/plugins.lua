@@ -33,6 +33,12 @@ require('packer').startup(function()
   use 'tpope/vim-surround' -- surround
   use 'nvim-lualine/lualine.nvim' -- Lua status line
   use 'glepnir/lspsaga.nvim'
+
+  -- Completion
+  use {
+    'ms-jpq/coq_nvim',
+    branch = 'coq'
+  }
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'

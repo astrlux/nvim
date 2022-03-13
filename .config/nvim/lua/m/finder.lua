@@ -1,7 +1,4 @@
-local to_ignore = {
-  'img', 'vendor', 'fonts', 'logs', '.DS_Store', 'node_modules', '.git', '.hg',
-  'lua-language-server', 'os', 'firefox'
-}
+local to_ignore = {'img', 'fonts', 'logs', '.git', 'firefox'}
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {

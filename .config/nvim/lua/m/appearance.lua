@@ -5,6 +5,6 @@ cmd 'colorscheme monochrome'
 cmd [[
   hi Normal guibg=none
   hi EndOfBuffer guifg=#121212
-  hi MatchParen guibg=grey
+  hi MatchParen guibg=#0D877C
   hi LspFloatWinBorder guifg=white guibg=none
 ]]
