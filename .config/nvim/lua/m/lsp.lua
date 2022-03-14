@@ -119,13 +119,13 @@ end
 local coq = require 'coq'
 
 -- Enable the following languague servers
-local servers = {'pyright', 'clangd', 'tsserver', 'gopls'}
+local servers = {'pyright', 'clangd'}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
-      debounce_text_changes = 80
+      debounce_text_changes = 72
     }
   }))
 end

@@ -1,4 +1,4 @@
-local to_ignore = {'deprecated', 'logs', '.git', 'firefox'}
+local to_ignore = {'deprecated', 'logs', '.git', 'FF'}
 local actions = require('telescope.actions')
 require('telescope').setup({
   defaults = {
@@ -24,7 +24,7 @@ require('telescope').setup({
     fzf = {
       fuzzy = true, -- false will perform exact matches
       override_generic_sorter = false,
-      override_file_sorter = true,
+      override_file_sorter = false,
       case_mode = 'smart_case' -- or 'ignore_case' or 'respect_case'
     },
     file_browser = {
