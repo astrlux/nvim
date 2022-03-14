@@ -43,12 +43,8 @@ require('packer').startup(function()
       }
     }
   }
-  -- use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  -- use 'hrsh7th/cmp-buffer'
-  -- use 'hrsh7th/cmp-nvim-lsp'
-  -- use 'saadparwaiz1/cmp_luasnip'
-  -- use 'L3MON4D3/LuaSnip'
   use 'kyazdani42/nvim-tree.lua' -- file tree
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'kdheepak/monochrome.nvim'
+  use 'Mofiqul/vscode.nvim'
 end)
