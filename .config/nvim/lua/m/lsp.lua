@@ -111,20 +111,23 @@ local on_attach = function(_, bufnr)
                  opts)
 end
 
--- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- -- nvim-cmp supports additional completion capabilities
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+-- coq capabilities
+local coq = require 'coq'
 
 -- Enable the following languague servers
 local servers = {'pyright', 'clangd', 'tsserver', 'gopls'}
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
       debounce_text_changes = 80
     }
-  }
+  }))
 end
 
 vim.cmd [[
