@@ -46,5 +46,6 @@ require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua' -- file tree
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'kdheepak/monochrome.nvim'
-  use 'Mofiqul/vscode.nvim'
+  use 'numToStr/Sakura.nvim'
+  use 'mvpopuk/inspired-github.vim'
 end)

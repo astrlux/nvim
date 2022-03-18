@@ -37,7 +37,7 @@ require'lspconfig'.efm.setup {
   root_dir = require'lspconfig'.util.root_pattern {'.git/', '.'},
   filetypes = {'lua'},
   settings = {
-    -- rootMarkers = {'.', '.git/'},
+    rootMarkers = {'.', '.git/'},
     languages = {
       lua = {
         {
@@ -130,7 +130,7 @@ for _, lsp in ipairs(servers) do
   }))
 end
 
-vim.cmd [[
+vim.api.nvim_exec([[
 augroup formatFile
     autocmd!
     autocmd BufWritePre *.lua,*.go,*.cpp,*.js,*.jsx,*.ts,*.tsx,*.rs,*.py lua vim.lsp.buf.formatting_sync(nil, 250)
@@ -154,4 +154,4 @@ augroup END
 "    autocmd!
 "    autocmd CursorMoved *.cpp,*.py,*.c,*.go exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 "augroup END
-]]
+]], false)

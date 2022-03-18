@@ -1,5 +1,3 @@
 require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    'cpp', 'c', 'python', 'rust', 'markdown', 'typescript', 'html', 'css'
-  }
+  ensure_installed = {'cpp', 'c', 'python', 'markdown', 'html', 'css'}
 }
