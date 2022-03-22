@@ -1,4 +1,4 @@
--- -- Inspired Github Colors
+-- Inspired Github Colors
 local colors = {
   red = '#ca1243',
   grey = '#f5f5f5',
@@ -20,8 +20,8 @@ local inspired_github = {
       bg = colors.red
     },
     b = {
-      fg = colors.black,
-      bg = colors.grey
+      fg = colors.white,
+      bg = colors.black
     },
     c = {
       fg = colors.light_grey,

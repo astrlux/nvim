@@ -1,36 +1,35 @@
 local o = vim.opt
-o.guicursor = ''
 o.mouse = 'a'
+o.tabstop = 2
 o.wrap = false
 o.number = true
 o.hidden = true
 o.ruler = false
 o.laststatus = 0
-o.undofile = true
-o.hlsearch = true
-o.showcmd = false
-o.showmode = false
 o.cmdheight = 1
-o.tabstop = 2
+o.guicursor = ''
 o.shiftwidth = 2
-o.softtabstop = 2
-o.expandtab = true
+o.updatetime = 90
+o.undofile = true
+o.showcmd = false
 o.smarttab = true
-o.autoindent = true
-o.smartindent = true
-o.updatetime = 180
-o.smartcase = true
-o.showmatch = true
+o.softtabstop = 2
+o.hlsearch = false
 o.incsearch = true
+o.smartcase = true
+o.showmode = false
+o.expandtab = true
+o.autoindent = true
+o.showmatch = false
 o.ignorecase = true
-o.signcolumn = 'yes'
+o.smartindent = true
+o.signcolumn = 'number'
 o.relativenumber = true
 o.completeopt = 'menuone,noselect'
-o.scrolloff = 3
--- vim.cmd [[
---   augroup JumpCursorLastPosition
---     autocmd!
---     autocmd BufRead * autocmd FileType <buffer> ++once
---           \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
---   augroup END
--- ]]
+vim.cmd [[
+  augroup JumpCursorLastPosition
+    autocmd!
+    autocmd BufRead * autocmd FileType <buffer> ++once
+          \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
+  augroup END
+]]

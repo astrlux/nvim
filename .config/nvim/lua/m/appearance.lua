@@ -1,14 +1,9 @@
 local o, g, cmd = vim.opt, vim.g, vim.cmd
-o.tgc = true -- termguicolors
+o.tgc = false
 o.bg = 'dark'
-cmd 'colorscheme monochrome'
+cmd 'colorscheme default'
 vim.api.nvim_exec([[
-  hi Normal guibg=none
-  hi EndOfBuffer guifg=#121212
-  hi LspFloatWinBorder guifg=white guibg=none
+hi Normal guibg=none
+hi LspFloatWinBorder guifg=white guibg=none
+hi EndOfBuffer guifg=#444444
 ]], false)
--- cmd [[
--- hi Normal guibg=none
--- hi EndOfBuffer guifg=#121212
--- hi LspFloatWinBorder guifg=white guibg=none
--- ]]

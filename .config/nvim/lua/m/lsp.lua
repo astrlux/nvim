@@ -155,3 +155,13 @@ augroup END
 "    autocmd CursorMoved *.cpp,*.py,*.c,*.go exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 "augroup END
 ]], false)
+
+-- suppress error message from lang server (credit: Pocco81)
+vim.notify = function(msg, log_level, _opts)
+  if msg:match('exit code') then return end
+  if log_level == vim.log.levels.ERROR then
+    vim.api.nvim_err_writeln(msg)
+  else
+    vim.api.nvim_echo({{msg}}, true, {})
+  end
+end
