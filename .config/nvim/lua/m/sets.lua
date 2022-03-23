@@ -23,7 +23,7 @@ o.autoindent = true
 o.showmatch = false
 o.ignorecase = true
 o.smartindent = true
-o.signcolumn = 'number'
+o.signcolumn = 'yes'
 o.relativenumber = true
 o.completeopt = 'menuone,noselect'
 vim.cmd [[

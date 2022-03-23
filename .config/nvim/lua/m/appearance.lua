@@ -1,7 +1,7 @@
 local o, g, cmd = vim.opt, vim.g, vim.cmd
-o.tgc = false
+o.tgc = true
 o.bg = 'dark'
-cmd 'colorscheme default'
+cmd 'colorscheme monochrome'
 vim.api.nvim_exec([[
 hi Normal guibg=none
 hi LspFloatWinBorder guifg=white guibg=none
