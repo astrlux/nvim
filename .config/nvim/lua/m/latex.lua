@@ -12,4 +12,3 @@ vim.api.nvim_exec([[
     autocmd FileType markdown nnoremap <buffer> T :silent !pandoc % -o compiled.pdf && open -a Preview && open -a kitty<CR>
   augroup END
 ]], false)
-

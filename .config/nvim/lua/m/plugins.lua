@@ -33,16 +33,20 @@ require('packer').startup(function()
   use 'tpope/vim-surround' -- surround
   use 'nvim-lualine/lualine.nvim' -- Lua status line
   use 'glepnir/lspsaga.nvim'
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
+  use {
+    'ms-jpq/coq_nvim',
+    branch = 'coq',
+    requires = {
+      {
+        'ms-jpq/coq.artifacts',
+        branch = 'artifacts'
+      }
+    }
+  }
   use 'kyazdani42/nvim-tree.lua' -- file tree
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'kdheepak/monochrome.nvim'
   use { -- INSTALL
-    'astrlux/karonda.nvim',
+    'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
   }
 end)

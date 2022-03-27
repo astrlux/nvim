@@ -37,7 +37,7 @@ require'lspconfig'.efm.setup {
   root_dir = require'lspconfig'.util.root_pattern {'.git/', '.'},
   filetypes = {'lua'},
   settings = {
-    -- rootMarkers = {'.', '.git/'},
+    rootMarkers = {'.', '.git/'},
     languages = {
       lua = {
         {
@@ -111,23 +111,26 @@ local on_attach = function(_, bufnr)
                  opts)
 end
 
--- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- -- nvim-cmp supports additional completion capabilities
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+-- coq capabilities
+local coq = require 'coq'
 
 -- Enable the following languague servers
-local servers = {'pyright', 'clangd', 'tsserver', 'gopls'}
+local servers = {'pyright', 'clangd'}
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
-      debounce_text_changes = 80
+      debounce_text_changes = 72
     }
-  }
+  }))
 end
 
-vim.cmd [[
+vim.api.nvim_exec([[
 augroup formatFile
     autocmd!
     autocmd BufWritePre *.lua,*.go,*.cpp,*.js,*.jsx,*.ts,*.tsx,*.rs,*.py lua vim.lsp.buf.formatting_sync(nil, 250)
@@ -151,4 +154,14 @@ augroup END
 "    autocmd!
 "    autocmd CursorMoved *.cpp,*.py,*.c,*.go exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 "augroup END
-]]
+]], false)
+
+-- suppress error message from lang server (credit: Pocco81)
+vim.notify = function(msg, log_level, _opts)
+  if msg:match('exit code') then return end
+  if log_level == vim.log.levels.ERROR then
+    vim.api.nvim_err_writeln(msg)
+  else
+    vim.api.nvim_echo({{msg}}, true, {})
+  end
+end
