@@ -41,4 +41,8 @@ require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua' -- file tree
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'kdheepak/monochrome.nvim'
+  use { -- INSTALL
+    'astrlux/karonda.nvim',
+    requires = {'rktjmp/lush.nvim'}
+  }
 end)
