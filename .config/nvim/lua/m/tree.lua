@@ -3,7 +3,7 @@ local g = vim.g
 g.netrw_banner = 0
 g.netrw_liststyle = 3
 g.netrw_browse_split = 4
-g.netrw_winsize = 27
+g.netrw_winsize = 25
 
 -- map('n', '<LEADER>t', ':NvimTreeToggle<CR>', nor)
 -- map('n', '<LEADER>fb', ':Telescope file_browser<CR>', nor)
