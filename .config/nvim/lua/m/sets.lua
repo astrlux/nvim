@@ -26,10 +26,10 @@ o.smartindent = true
 o.signcolumn = 'number'
 o.relativenumber = true
 o.completeopt = 'menuone,noselect'
-vim.cmd [[
-  augroup JumpCursorLastPosition
-    autocmd!
-    autocmd BufRead * autocmd FileType <buffer> ++once
-          \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
-  augroup END
-]]
+-- vim.cmd [[
+--   augroup JumpCursorLastPosition
+--     autocmd!
+--     autocmd BufRead * autocmd FileType <buffer> ++once
+--           \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
+--   augroup END
+-- ]]

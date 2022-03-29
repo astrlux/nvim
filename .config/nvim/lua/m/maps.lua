@@ -72,16 +72,7 @@ map('n', '<LEADER>cs',
 map('n', '<LEADER>b', [[<CMD>lua require('telescope.builtin').buffers()<CR>]],
     nor)
 -- File tree
-map('n', '<LEADER>t', ':NvimTreeToggle<CR>', nor)
-map('n', '<LEADER>fb', ':Telescope file_browser<CR>', nor)
--- Floating terminal
-map('n', '`t',
-    [[<CMD>lua require('lspsaga.floaterm').open_float_terminal()<CR>]], nor)
-map('t', '`t',
-    [[<C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal('', 1)<CR>]],
-    nor)
-map('n', '<leader>mm',
-    [[<Cmd>lua require('material.functions').toggle_style()<CR>]], nor)
+map('n', '<LEADER>t', ':Lexplore<CR>', nor)
 -- map('n', '<LEADER>abc<CR>', 'iabcdefghijklmnopqrstuvwxyz<Esc>', nor)
 map('n', '<LEADER>abc<CR>',
     'i#include "/Users/astrlux/stdc++.h"<CR>using namespace std;<Esc>o', nor)

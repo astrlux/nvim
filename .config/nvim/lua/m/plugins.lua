@@ -19,7 +19,7 @@ require('packer').startup(function()
     run = ':TSUpdate'
   }
   use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
-  use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
+  -- use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
   use { -- native C port of FZF
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make'
@@ -29,10 +29,7 @@ require('packer').startup(function()
     requires = {'nvim-lua/plenary.nvim'}
   }
   use 'mbbill/undotree' -- View undo history
-  use 'tpope/vim-fugitive' -- Git power tool
   use 'tpope/vim-surround' -- surround
-  use 'nvim-lualine/lualine.nvim' -- Lua status line
-  use 'glepnir/lspsaga.nvim'
   use {
     'ms-jpq/coq_nvim',
     branch = 'coq',
@@ -43,8 +40,6 @@ require('packer').startup(function()
       }
     }
   }
-  use 'kyazdani42/nvim-tree.lua' -- file tree
-  use 'nvim-telescope/telescope-file-browser.nvim'
   use { -- INSTALL
     'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
