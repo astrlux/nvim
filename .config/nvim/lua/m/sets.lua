@@ -21,9 +21,9 @@ o.expandtab = true
 o.autoindent = true
 o.showmatch = false
 o.ignorecase = true
-o.cursorline = true
+o.cursorline = false
 o.smartindent = true
-o.signcolumn = 'number'
+o.signcolumn = 'no'
 o.relativenumber = true
 o.completeopt = 'menuone,noselect'
 -- vim.cmd [[

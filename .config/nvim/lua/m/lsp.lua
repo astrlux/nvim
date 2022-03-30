@@ -119,7 +119,7 @@ end
 local coq = require 'coq'
 
 -- Enable the following languague servers
-local servers = {'pyright', 'clangd'}
+local servers = {'hls', 'pyright', 'clangd'}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
     on_attach = on_attach,
@@ -147,8 +147,8 @@ augroup markdownWordProcessor
 augroup END
 augroup latexWordProcessor
     autocmd!
-    autocmd FileType latex setlocal spell linebreak wrap
-    autocmd BufRead,BufNewFile *.tex setlocal spell linebreak wrap
+    autocmd FileType latex setlocal linebreak wrap
+    autocmd BufRead,BufNewFile *.tex setlocal linebreak wrap
 augroup END
 "augroup autoHi
 "    autocmd!
