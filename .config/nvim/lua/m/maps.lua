@@ -77,5 +77,5 @@ map('n', '<LEADER>t', ':Lexplore<CR>', nor)
 map('n', '<LEADER>abc<CR>',
     'i#include "/Users/astrlux/stdc++.h"<CR>using namespace std;<Esc>o', nor)
 map('n', '<LEADER>pn',
-    ':silent !pushd ~/Notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
+    ':silent !pushd ~/dotfiles/notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
     nor)
