@@ -133,18 +133,18 @@ end
 vim.api.nvim_exec([[
 augroup formatFile
     autocmd!
-    autocmd BufWritePre *.lua,*.go,*.cpp,*.js,*.jsx,*.ts,*.tsx,*.rs,*.py lua vim.lsp.buf.formatting_sync(nil, 250)
+    autocmd BufWritePre *.lua,*.go,*.cpp,*.js,*.jsx,*.ts,*.tsx,*.rs,*.py,*.hs lua vim.lsp.buf.formatting_sync(nil, 250)
 augroup END
 augroup textWordProcessor
     autocmd!
-    autocmd FileType text setlocal spell linebreak wrap
-    autocmd BufRead,BufNewFile *.txt setlocal spell linebreak wrap
+    autocmd FileType text setlocal linebreak wrap
+    autocmd BufRead,BufNewFile *.txt setlocal linebreak wrap
 augroup END
-augroup markdownWordProcessor
-    autocmd!
-    autocmd FileType markdown setlocal spell linebreak wrap
-    autocmd BufRead,BufNewFile *.md setlocal spell linebreak wrap
-augroup END
+"augroup markdownWordProcessor
+"    autocmd!
+"    autocmd FileType markdown setlocal linebreak wrap
+"    autocmd BufRead,BufNewFile *.md setlocal linebreak wrap
+"augroup END
 augroup latexWordProcessor
     autocmd!
     autocmd FileType latex setlocal linebreak wrap

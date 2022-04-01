@@ -1,5 +1,5 @@
 local to_ignore = {
-  '_deprecated', 'browser', 'notes', 'logs', 'zsh', '.git', 'firefox'
+  '_deprecated', 'browser', 'notes', 'logs', 'zsh', '.git', 'firefox', 'puzzles'
 }
 local actions = require('telescope.actions')
 require('telescope').setup({
@@ -28,7 +28,7 @@ require('telescope').setup({
       override_generic_sorter = false,
       override_file_sorter = true,
       case_mode = 'smart_case' -- or 'ignore_case' or 'respect_case'
-    },
+    }
   }
 })
 
