@@ -44,4 +44,5 @@ require('packer').startup(function()
     'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
   }
+  use 'rktjmp/shipwright.nvim'
 end)

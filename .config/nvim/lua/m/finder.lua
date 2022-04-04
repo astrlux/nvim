@@ -1,5 +1,5 @@
 local to_ignore = {
-  '_deprecated', 'browser', 'notes', 'logs', 'zsh', '.git', 'firefox', 'puzzles'
+  'deprecated', 'browser', 'notes', 'logs', 'zsh', '.git', 'firefox', 'puzzles'
 }
 local actions = require('telescope.actions')
 require('telescope').setup({
