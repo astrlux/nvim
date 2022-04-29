@@ -40,11 +40,11 @@ require('packer').startup(function()
       }
     }
   }
-  use { -- INSTALL
+  use {
     'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
   }
-  use { -- INSTALL
+  use {
     'metalelf0/jellybeans-nvim',
     requires = {'rktjmp/lush.nvim'}
   }
