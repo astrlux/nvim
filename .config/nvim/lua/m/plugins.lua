@@ -44,5 +44,8 @@ require('packer').startup(function()
     'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
   }
-  use 'rktjmp/shipwright.nvim'
+  use { -- INSTALL
+    'metalelf0/jellybeans-nvim',
+    requires = {'rktjmp/lush.nvim'}
+  }
 end)
