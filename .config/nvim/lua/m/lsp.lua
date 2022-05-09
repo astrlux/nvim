@@ -29,25 +29,25 @@ require'lspconfig'.sumneko_lua.setup {
   }
 }
 
-require'lspconfig'.efm.setup {
-  init_options = {
-    documentFormatting = true,
-    codeAction = true
-  },
-  root_dir = require'lspconfig'.util.root_pattern {'.git/', '.'},
-  filetypes = {'lua'},
-  settings = {
-    rootMarkers = {'.', '.git/'},
-    languages = {
-      lua = {
-        {
-          formatCommand = 'lua-format -i --no-keep-simple-function-one-line --no-break-after-operator --column-limit=80 --break-after-table-lb --indent-width=2 --double-quote-to-single-quote',
-          formatStdin = true
-        }
-      }
-    }
-  }
-}
+-- require'lspconfig'.efm.setup {
+--   init_options = {
+--     documentFormatting = true,
+--     codeAction = true
+--   },
+--   root_dir = require'lspconfig'.util.root_pattern {'.git/', '.'},
+--   filetypes = {'lua'},
+--   settings = {
+--     rootMarkers = {'.', '.git/'},
+--     languages = {
+--       lua = {
+--         {
+--           formatCommand = 'lua-format -i --no-keep-simple-function-one-line --no-break-after-operator --column-limit=80 --break-after-table-lb --indent-width=2 --double-quote-to-single-quote',
+--           formatStdin = true
+--         }
+--       }
+--     }
+--   }
+-- }
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

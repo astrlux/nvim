@@ -3,7 +3,7 @@ local nor = {
   noremap = true,
   silent = true
 }
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 -- Esc into normal mode faster
 map('i', 'kj', '<Esc>', nor)
 map('i', 'jk', '<Esc>', nor)
@@ -35,7 +35,7 @@ map('n', '<LEADER>l', ':wincmd l<CR>', nor)
 map('', '<C-l>', ':bnext<CR>', nor)
 map('', '<C-h>', ':bprev<CR>', nor)
 -- Save files faster
-map('n', ';', ':w<CR>', nor)
+map('n', '<LEADER>w', ':w<CR>', nor)
 map('n', '<LEADER>q', ':q<CR>', nor)
 -- Show timestamped undo history
 map('n', '<LEADER>u', ':UndotreeShow<CR>', nor)
@@ -77,5 +77,5 @@ map('n', '<LEADER>t', ':Lexplore<CR>', nor)
 map('n', '<LEADER>abc<CR>',
     'i#include "/Users/astrlux/stdc++.h"<CR>using namespace std;<Esc>o', nor)
 map('n', '<LEADER>pn',
-    ':silent !pushd ~/dotfiles/notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
+    ':silent !pushd ~/.dotfiles/notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
     nor)
