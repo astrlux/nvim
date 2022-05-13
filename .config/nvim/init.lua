@@ -1,6 +1,6 @@
 require 'm.plugins'
 require 'm.coq'
-require 'm.lsp'
+-- require 'm.lsp'
 require 'm.maps'
 require 'm.sets'
 require 'm.appearance'

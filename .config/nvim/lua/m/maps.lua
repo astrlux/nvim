@@ -18,8 +18,8 @@ map('n', '<LEADER>4', ':PackerClean<CR>', nor)
 map('v', '<', '<gv', nor)
 map('v', '>', '>gv', nor)
 -- Auto-close brackets
--- map('i', '(', '()<left>', nor)
--- map('i', '[', '[]<left>', nor)
+map('i', '(', '()<left>', nor)
+map('i', '[', '[]<left>', nor)
 map('i', '{<CR>', '{<CR>}<ESC><S-O>', nor)
 -- Move cursor faster
 map('n', '<DOWN>', '9j', nor)
@@ -77,5 +77,5 @@ map('n', '<LEADER>t', ':Lexplore<CR>', nor)
 map('n', '<LEADER>abc<CR>',
     'i#include "/Users/astrlux/stdc++.h"<CR>using namespace std;<Esc>o', nor)
 map('n', '<LEADER>pn',
-    ':silent !pushd ~/.dotfiles/notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
+    ':silent !pushd ~/notes; git add .; git commit -am \'changes\'; git push; popd;<CR>',
     nor)

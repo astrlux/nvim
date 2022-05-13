@@ -19,7 +19,7 @@ require('packer').startup(function()
     run = ':TSUpdate'
   }
   use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
-  -- use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
+  use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
   use { -- native C port of FZF
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make'
@@ -44,6 +44,8 @@ require('packer').startup(function()
     'astrlux/karonda',
     requires = {'rktjmp/lush.nvim'}
   }
+  use 'Mofiqul/vscode.nvim'
+  use 'marko-cerovac/material.nvim'
   use {
     'metalelf0/jellybeans-nvim',
     requires = {'rktjmp/lush.nvim'}

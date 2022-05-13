@@ -6,7 +6,7 @@ vim.g.coq_settings = {
       mode = 'none'
     },
     pum = {
-      fast_close = false
+      fast_close = false,
     }
   }
 }
