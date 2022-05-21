@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local nor = {
-  noremap = true,
-  silent = true
+    noremap = true,
+    silent = true
 }
 vim.g.mapleader = ','
 -- Esc into normal mode faster
@@ -17,9 +17,6 @@ map('n', '<LEADER>4', ':PackerClean<CR>', nor)
 -- Indent visual mode
 map('v', '<', '<gv', nor)
 map('v', '>', '>gv', nor)
--- Auto-close brackets
--- map('i', '(', '()<left>', nor)
--- map('i', '[', '[]<left>', nor)
 map('i', '{<CR>', '{<CR>}<ESC><S-O>', nor)
 -- Move cursor faster
 map('n', '<DOWN>', '9j', nor)

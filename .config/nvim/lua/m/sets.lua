@@ -25,7 +25,7 @@ o.cursorline = true
 o.updatetime = 720
 o.smartindent = true
 o.softtabstop = 4
-o.relativenumber = false
+o.relativenumber = true
 o.scrolloff = 8
 o.completeopt = 'menuone,noselect'
 -- vim.cmd [[
