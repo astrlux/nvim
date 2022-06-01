@@ -1,4 +1,4 @@
-local o, g, cmd = vim.opt, vim.g, vim.cmd
+local o, cmd = vim.opt, vim.cmd
 o.tgc = true
 o.bg = 'dark'
-cmd 'colorscheme gruvbox'
+cmd 'colorscheme dracula'

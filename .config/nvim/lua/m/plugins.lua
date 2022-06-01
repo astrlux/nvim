@@ -1,9 +1,9 @@
 -- If packer isn't present, install it.
 local install_path = vim.fn.stdpath 'data'
-                         .. '/site/pack/packer/start/packer.nvim'
+    .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim '
-                       .. install_path)
+        .. install_path)
 end
 vim.api.nvim_exec([[
   augroup Packer
@@ -26,7 +26,7 @@ require('packer').startup(function()
     }
     use { -- Fuzzy file finder
         'nvim-telescope/telescope.nvim',
-        requires = {'nvim-lua/plenary.nvim'}
+        requires = { 'nvim-lua/plenary.nvim' }
     }
     use 'mbbill/undotree' -- View undo history
     use 'tpope/vim-surround' -- surround
@@ -43,11 +43,12 @@ require('packer').startup(function()
     use 'nvim-lualine/lualine.nvim'
     use {
         'astrlux/karonda',
-        requires = {'rktjmp/lush.nvim'}
+        requires = { 'rktjmp/lush.nvim' }
     }
     use 'ellisonleao/gruvbox.nvim'
+    use 'Mofiqul/dracula.nvim'
     use {
         'metalelf0/jellybeans-nvim',
-        requires = {'rktjmp/lush.nvim'}
+        requires = { 'rktjmp/lush.nvim' }
     }
 end)

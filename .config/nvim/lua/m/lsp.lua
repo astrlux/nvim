@@ -3,8 +3,8 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require'lspconfig'.sumneko_lua.setup {
-    cmd = {'lua-language-server'},
+require 'lspconfig'.sumneko_lua.setup {
+    cmd = { 'lua-language-server' },
     settings = {
         Lua = {
             runtime = {
@@ -12,7 +12,7 @@ require'lspconfig'.sumneko_lua.setup {
                 path = runtime_path
             },
             diagnostics = { -- Get language server to recognize `vim` global
-                globals = {'vim'}
+                globals = { 'vim' }
             },
             workspace = { -- Make server aware of Neovim runtime files
                 library = vim.api.nvim_get_runtime_file('', true)
@@ -44,12 +44,11 @@ require'lspconfig'.sumneko_lua.setup {
 --     }
 -- }
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        signs = true,
-        underline = true,
-        update_in_insert = false
-    })
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    signs = true,
+    underline = true,
+    update_in_insert = false
+})
 local signs = { -- Define diagnostic signs
     Error = '✗',
     Warning = '!',
@@ -86,38 +85,36 @@ local on_attach = function(_, bufnr)
     buf_set_keymap('n', 'gD', [[<CMD>lua vim.lsp.buf.declaration()<CR>]], opts)
     buf_set_keymap('n', 'gr', [[<CMD>lua vim.lsp.buf.references()<CR>]], opts)
     buf_set_keymap('n', 'gi', [[<CMD>lua vim.lsp.buf.implementation()<CR>]],
-                   opts)
+        opts)
     buf_set_keymap('n', 'gf', [[<CMD>lua vim.lsp.buf.formatting()<CR>]], opts)
     buf_set_keymap('n', 'qr', [[<CMD>lua vim.lsp.buf.rename()<CR>]], opts)
     buf_set_keymap('n', '<C-k>', [[<CMD>lua vim.lsp.buf.signature_help()<CR>]],
-                   opts)
+        opts)
     buf_set_keymap('n', '<LEADER>cd',
-                   [[<CMD>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded", focusable = false  })<CR>]],
-                   opts)
+        [[<CMD>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded", focusable = false  })<CR>]],
+        opts)
     buf_set_keymap('n', '<C-n>',
-                   [[<CMD>lua vim.diagnostic.goto_prev({ float =  { border = "rounded", focusable = false  }})<CR>]],
-                   opts)
+        [[<CMD>lua vim.diagnostic.goto_prev({ float =  { border = "rounded", focusable = false  }})<CR>]],
+        opts)
     buf_set_keymap('n', '<C-p>',
-                   [[<CMD>lua vim.diagnostic.goto_next({ float =  { border = "rounded", focusable = false }})<CR>]],
-                   opts)
+        [[<CMD>lua vim.diagnostic.goto_next({ float =  { border = "rounded", focusable = false }})<CR>]],
+        opts)
     -- buf_set_keymap('n', '<LEADER>hs', [[<CMD>lua vim.lsp.buf.signature_help()<CR>]], opts)
     buf_set_keymap('n', '<LEADER>ca',
-                   [[<CMD>lua vim.lsp.buf.code_action({ float =  { border = "rounded", focusable = false }})<CR>]],
-                   opts)
+        [[<CMD>lua vim.lsp.buf.code_action({ float =  { border = "rounded", focusable = false }})<CR>]],
+        opts)
     buf_set_keymap('n', 'K',
-                   [[<CMD>lua vim.lsp.buf.hover({ float =  { border = "rounded" }})<CR>]],
-                   opts)
+        [[<CMD>lua vim.lsp.buf.hover({ float =  { border = "rounded" }})<CR>]],
+        opts)
 end
 
--- -- nvim-cmp supports additional completion capabilities
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- coq capabilities
 local coq = require 'coq'
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 -- Enable the following languague servers
-local servers = {'hls', 'pyright', 'clangd'}
+local servers = { 'clangd', 'pyright' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
         on_attach = on_attach,
@@ -160,6 +157,6 @@ vim.notify = function(msg, log_level, _opts)
     if log_level == vim.log.levels.ERROR then
         vim.api.nvim_err_writeln(msg)
     else
-        vim.api.nvim_echo({{msg}}, true, {})
+        vim.api.nvim_echo({ { msg } }, true, {})
     end
 end
