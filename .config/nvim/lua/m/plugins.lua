@@ -40,15 +40,11 @@ require('packer').startup(function()
             }
         }
     }
-    use 'nvim-lualine/lualine.nvim'
     use {
         'astrlux/karonda',
         requires = { 'rktjmp/lush.nvim' }
     }
-    use 'ellisonleao/gruvbox.nvim'
+    use 'nvim-lualine/lualine.nvim'
     use 'Mofiqul/dracula.nvim'
-    use {
-        'metalelf0/jellybeans-nvim',
-        requires = { 'rktjmp/lush.nvim' }
-    }
+    use 'ellisonleao/gruvbox.nvim'
 end)

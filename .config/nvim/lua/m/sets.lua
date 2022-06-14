@@ -1,8 +1,8 @@
 local o = vim.opt
-o.wrap = false
 o.ruler = false
 o.mouse = 'a'
 o.number = true
+o.wrap = false
 o.hidden = true
 o.tabstop = 4
 o.guicursor = ''
@@ -27,6 +27,7 @@ o.smartindent = true
 o.softtabstop = 4
 o.relativenumber = true
 o.completeopt = 'menuone,noselect'
+-- o.scrolloff = 5
 -- vim.cmd [[
 --   augroup JumpCursorLastPosition
 --     autocmd!
