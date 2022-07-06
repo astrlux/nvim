@@ -1,4 +1,4 @@
--- If packer isn't present, install it.
+-- install packer
 local install_path = vim.fn.stdpath 'data'
     .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -30,6 +30,7 @@ require('packer').startup(function()
     }
     use 'mbbill/undotree' -- View undo history
     use 'tpope/vim-surround' -- surround
+    use 'lukas-reineke/indent-blankline.nvim'
     use {
         'ms-jpq/coq_nvim',
         branch = 'coq',
@@ -40,11 +41,10 @@ require('packer').startup(function()
             }
         }
     }
+    use 'astrlux/monokai.nvim'
     use {
         'astrlux/karonda',
         requires = { 'rktjmp/lush.nvim' }
     }
-    use 'nvim-lualine/lualine.nvim'
-    use 'Mofiqul/dracula.nvim'
-    use 'ellisonleao/gruvbox.nvim'
+    use 'savq/melange'
 end)
