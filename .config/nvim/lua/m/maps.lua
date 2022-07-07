@@ -3,7 +3,7 @@ local nor = {
     noremap = true,
     silent = true
 }
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
 -- Esc into normal mode faster
 map('i', 'kj', '<Esc>', nor)
 map('i', 'jk', '<Esc>', nor)

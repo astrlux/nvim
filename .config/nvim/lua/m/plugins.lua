@@ -29,7 +29,8 @@ require('packer').startup(function()
         requires = { 'nvim-lua/plenary.nvim' }
     }
     use 'mbbill/undotree' -- View undo history
-    use 'tpope/vim-surround' -- surround
+    use 'tpope/vim-surround' -- Surround
+    use 'tpope/vim-fugitive' -- Git integration
     use {
         'ms-jpq/coq_nvim',
         branch = 'coq',
@@ -44,7 +45,6 @@ require('packer').startup(function()
         'astrlux/karonda',
         requires = { 'rktjmp/lush.nvim' }
     }
-    use 'nvim-lualine/lualine.nvim'
-    use 'Mofiqul/dracula.nvim'
-    use 'ellisonleao/gruvbox.nvim'
+    use 'astrlux/monokai.nvim'
+    use 'savq/melange'
 end)
