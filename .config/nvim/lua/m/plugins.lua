@@ -20,7 +20,7 @@ require('packer').startup(function()
     }
     use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
     use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
-    use { -- native C port of FZF
+    use { -- native C port of fzf
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make'
     }
@@ -29,9 +29,10 @@ require('packer').startup(function()
         requires = { 'nvim-lua/plenary.nvim' }
     }
     use 'mbbill/undotree' -- View undo history
-    use 'tpope/vim-surround' -- surround
-    use 'lukas-reineke/indent-blankline.nvim'
-    use {
+    use 'ur4ltz/surround.nvim' -- Surround
+    use 'lukas-reineke/indent-blankline.nvim' -- Indent lines
+    use 'kyazdani42/nvim-web-devicons'
+    use { -- Auto-completion
         'ms-jpq/coq_nvim',
         branch = 'coq',
         requires = {
@@ -41,10 +42,12 @@ require('packer').startup(function()
             }
         }
     }
-    use 'astrlux/monokai.nvim'
+    use 'tpope/vim-fugitive'
+    -- Colorschemes
     use {
         'astrlux/karonda',
         requires = { 'rktjmp/lush.nvim' }
     }
     use 'savq/melange'
+    use 'astrlux/monokai.nvim'
 end)
