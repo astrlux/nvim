@@ -31,7 +31,6 @@ require('packer').startup(function()
     use 'mbbill/undotree' -- View undo history
     use 'ur4ltz/surround.nvim' -- Surround
     use 'lukas-reineke/indent-blankline.nvim' -- Indent lines
-    use 'kyazdani42/nvim-web-devicons'
     use { -- Auto-completion
         'ms-jpq/coq_nvim',
         branch = 'coq',
@@ -42,7 +41,12 @@ require('packer').startup(function()
             }
         }
     }
-    use 'tpope/vim-fugitive'
+    use { -- Git tool
+        'tanvirtin/vgit.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+    }
     -- Colorschemes
     use {
         'astrlux/karonda',
