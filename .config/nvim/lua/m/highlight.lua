@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     -- ensure_installed can be "all" or a list of languages { "python", "javascript" }
     ensure_installed = {
         'python', 'bash', 'javascript', 'go', 'rust', 'typescript', 'cpp', 'lua'
@@ -9,7 +9,7 @@ require'nvim-treesitter.configs'.setup {
     },
     incremental_selection = {
         enable = true, -- you can also use a table with list of langs here (e.g. { "python", "javascript" })
-        disable = {'cpp', 'lua'},
+        disable = { 'cpp', 'lua' },
         keymaps = { -- mappings for incremental selection (visual mappings)
             init_selection = 'gnn', -- maps in normal mode to init the node/scope selection
             node_incremental = 'grn', -- increment to the upper named parent

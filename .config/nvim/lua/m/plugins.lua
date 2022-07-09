@@ -1,4 +1,4 @@
--- If packer isn't present, install it.
+-- install packer
 local install_path = vim.fn.stdpath 'data'
     .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -20,7 +20,7 @@ require('packer').startup(function()
     }
     use 'neovim/nvim-lspconfig' -- Collection of configs for built-in LSP client
     use 'kabouzeid/nvim-lspinstall' -- LSPInstall feature
-    use { -- native C port of FZF
+    use { -- native C port of fzf
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make'
     }
@@ -30,8 +30,7 @@ require('packer').startup(function()
     }
     use 'mbbill/undotree' -- View undo history
     use 'tpope/vim-surround' -- Surround
-    use 'tpope/vim-fugitive' -- Git integration
-    use {
+    use { -- Auto-completion
         'ms-jpq/coq_nvim',
         branch = 'coq',
         requires = {
@@ -41,10 +40,11 @@ require('packer').startup(function()
             }
         }
     }
+    -- Colorschemes
     use {
         'astrlux/karonda',
         requires = { 'rktjmp/lush.nvim' }
     }
-    use 'astrlux/monokai.nvim'
     use 'savq/melange'
+    use 'astrlux/monokai.nvim'
 end)
