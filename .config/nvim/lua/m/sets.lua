@@ -1,5 +1,5 @@
 local o          = vim.opt
-o.ruler          = true
+o.ruler          = false
 o.mouse          = 'a'
 o.number         = false
 o.wrap           = false
@@ -17,7 +17,7 @@ o.smartcase      = true
 o.cmdheight      = 1
 o.expandtab      = true
 o.autoindent     = true
-o.laststatus     = 3
+o.laststatus     = 0
 o.signcolumn     = 'no'
 o.shiftwidth     = 4
 o.ignorecase     = true
