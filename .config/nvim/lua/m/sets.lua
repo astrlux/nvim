@@ -1,5 +1,4 @@
-local o = vim.opt
-
+local o          = vim.opt
 o.ruler          = true
 o.mouse          = 'a'
 o.number         = false
