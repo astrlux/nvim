@@ -47,4 +47,5 @@ require('packer').startup(function()
     }
     use 'savq/melange'
     use 'astrlux/monokai.nvim'
+    use 'Lokaltog/monotone.nvim'
 end)
