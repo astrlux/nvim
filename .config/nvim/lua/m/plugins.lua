@@ -47,7 +47,6 @@ require('packer').startup(function()
         requires = { 'rktjmp/lush.nvim' }
     }
     use 'savq/melange'
-    use 'Lokaltog/monotone.nvim'
     use 'astrlux/monokai.nvim'
-    use 'Mofiqul/vscode.nvim'
+    use 'Lokaltog/monotone.nvim'
 end)
