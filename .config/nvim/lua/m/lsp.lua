@@ -152,7 +152,7 @@ augroup END
 ]], false)
 
 -- suppress error message from lang server (credit: Pocco81)
-vim.notify = function(msg, log_level, _opts)
+vim.notify = function(msg, log_level, _)
     if msg:match('exit code') then return end
     if log_level == vim.log.levels.ERROR then
         vim.api.nvim_err_writeln(msg)

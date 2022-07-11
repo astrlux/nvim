@@ -24,6 +24,7 @@ require('packer').startup(function()
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make'
     }
+    -- use 'lukas-reineke/indent-blankline.nvim' -- indent marks
     use { -- Fuzzy file finder
         'nvim-telescope/telescope.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
@@ -46,5 +47,7 @@ require('packer').startup(function()
         requires = { 'rktjmp/lush.nvim' }
     }
     use 'savq/melange'
+    use 'Lokaltog/monotone.nvim'
     use 'astrlux/monokai.nvim'
+    use 'Mofiqul/vscode.nvim'
 end)
